@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: radial-gradient(circle, #dbeafe, #a5b4fc, #6366f1);
+      background-size: 400% 400%;
+      animation: moveGradient 10s ease alternate-reverse;
+      z-index: -1;
+    }
+    @keyframes moveGradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    header {
+      background-color: rgba(0,0,0,0.7);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .hero {
+      color: #1a1a1a;
+      padding: 100px 20px 60px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    }
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+  }
+  .projects .card {
+    flex: 1 1 250px;
+    max-width: 300px;
+      
+    
+     }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card h4 {
+      margin-bottom: 10px;
+      color: #4a7cff;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="animated-bg"></div>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="successprofile.jpg.jpg" alt="Success Profile Picture">
+    <h2>Hello, I'm Success 👋</h2>
+    <p>A passionate Web3 community manager, marketing specialist, and fullstack developer. I create digital experiences and help communities thrive in the decentralized world.</p>
+  </section>
+
+  <section class="section" id="about">
+    <h3>About Me</h3>
+    <p>I have a strong background in Web3, social media strategy, community engagement, and content creation. I'm also a Fullstack Developer with experience in JavaScript, React, Node.js, MongoDB, and PostgreSQL. I build modern web applications and contribute to technical growth within teams.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h3>Projects</h3>
+    <div class="projects">
+      <div class="card">
+        <h4>Smok3 UGC Campaign</h4>
+        <p>Led user-generated content strategy and grew engagement by 2x in 4 weeks.</p>
+      </div>
+      <div class="card">
+        <h4>Timeless Finds</h4>
+        <p>Brand development and community growth for a vintage boutique concept.</p>
+      </div>
+      <div class="card">
+        <h4>Polyverse Campaign</h4>
+        <p>Created content and managed a creator-led campaign for an NFT-based metaverse project.</p>
+      </div>
+      <div class="card">
+        <h4>DevStack Portfolio App</h4>
+        <p>A fullstack portfolio site built using React, Express, and MongoDB for dynamic content updates.</p>
+      </div>
+      
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h3>Skills</h3>
+    <div class="skills">
+      <div class="card">Community Management</div>
+      <div class="card">Web3 Marketing</div>
+      <div class="card">Fullstack Development</div>
+      <div class="card">JavaScript / React / Node.js</div>
+      <div class="card">MongoDB / PostgreSQL</div>
+      <div class="card">Social Media Growth</div>
+      <div class="card">Project Research</div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <h3>Work Gallery</h3>
+    <div class="gallery">
+      <img src="first work .png" alt="Project 1 Screenshot">
+      <img src="work2.jpg" alt="Project 2 Screenshot">
+      <img src="work3.jpg" alt="Project 3 Screenshot">
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Contact</h3>
+    <p>Let’s connect on <a href="https://x.com/successkaay" target="_blank">Twitter</a> or email me at <strong>successkomolafe@gmail.com</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Success Komolafe. Built with love ❤️</p>
+  </footer>
+</body>
+</html>
